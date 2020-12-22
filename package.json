@@ -4,7 +4,8 @@
     "packages": [
       "api",
       "web"
-    ]
+    ],
+    "nohoist": ["react-native", "react-native/**", "material-design-icons"]
   },
   "devDependencies": {
     "@redwoodjs/core": "^0.21.0"
