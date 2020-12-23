@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, routes } from '@redwoodjs/router'
 import { Transition } from '@headlessui/react'
 
-import NavLink from '../../components/NavLink'
+import NavigationLink from '../../components/NavigationLink'
 
 const ThemeJournalLayout = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -97,8 +97,8 @@ const ThemeJournalLayout = ({ children }) => {
             </div>
             <nav className="mt-5 px-2 space-y-1">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <NavLink destination="home">Dashboard</NavLink>
-              <NavLink destination="about">About</NavLink>
+              <NavigationLink destination="daily">Daily</NavigationLink>
+              <NavigationLink destination="theme">Theme</NavigationLink>
             </nav>
           </div>
           <div className="flex-shrink-0 flex bg-gray-700 p-4">
@@ -141,8 +141,8 @@ const ThemeJournalLayout = ({ children }) => {
               </div>
               <nav className="mt-5 flex-1 px-2 bg-gray-800 space-y-1">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                <NavLink destination="home">Dashboard</NavLink>
-                <NavLink destination="about">About</NavLink>
+                <NavigationLink destination="daily">Daily</NavigationLink>
+                <NavigationLink destination="theme">Theme</NavigationLink>
               </nav>
             </div>
             <div className="flex-shrink-0 flex bg-gray-700 p-4">

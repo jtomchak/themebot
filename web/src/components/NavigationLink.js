@@ -1,4 +1,4 @@
-import { Link, routes } from '@redwoodjs/router'
+import { NavLink, routes, useMatch } from '@redwoodjs/router'
 
 const NAVIGATION = {
   home: {
@@ -11,6 +11,28 @@ const NAVIGATION = {
         d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
       />
     ), // Heroicon name: Home
+  },
+  daily: {
+    route: routes.daily(),
+    Path: () => (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+      />
+    ),
+  },
+  theme: {
+    route: routes.theme(),
+    Path: () => (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+      />
+    ),
   },
   about: {
     route: routes.about(),
@@ -25,11 +47,14 @@ const NAVIGATION = {
   },
 }
 
-const NavLink = ({ destination, children }) => {
+const NavigationLink = ({ destination, children }) => {
   const { route, Path } = NAVIGATION[destination]
+  const matchInfo = useMatch(route)
   return (
-    <Link
+    <NavLink
       to={route}
+      isActive={matchInfo.match}
+      activeClassName="bg-gray-200 text-gray-900"
       className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"
     >
       {/* Heroicon name: users */}
@@ -44,8 +69,8 @@ const NavLink = ({ destination, children }) => {
         <Path />
       </svg>
       {children}
-    </Link>
+    </NavLink>
   )
 }
 
-export default NavLink
+export default NavigationLink
