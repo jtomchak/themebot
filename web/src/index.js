@@ -9,9 +9,14 @@ import Routes from 'src/Routes'
 
 import './index.css'
 
-
-
 netlifyIdentity.init()
+netlifyIdentity.on('login', function () {
+  var iframe = document.getElementById('netlify-identity-widget')
+  if (iframe) {
+    var btnClose = iframe.contentWindow.document.querySelector('.btnClose')
+    btnClose.click()
+  }
+})
 
 ReactDOM.render(
   <FatalErrorBoundary page={FatalErrorPage}>
