@@ -1,25 +1,25 @@
 export const schema = gql`
   type User {
     id: Int!
-    netlifyID: Int!
-    stripeID: Int!
+    netlifyID: String!
+    stripeID: String!
     createdAt: DateTime!
   }
 
   type Query {
     users: [User!]!
-    getUserByNetlifyID(netlifyID: Int!): User!
-    getUserByStripeID(stripeID: Int!): User!
+    getUserByNetlifyID(netlifyID: String!): User!
+    getUserByStripeID(stripeID: String!): User!
   }
 
   input CreateUserInput {
-    netlifyID: Int!
-    stripeID: Int!
+    netlifyID: String!
+    stripeID: String!
   }
 
   input UpdateUserInput {
-    netlifyID: Int
-    stripeID: Int
+    netlifyID: String
+    stripeID: String
   }
 
   type Mutation {
