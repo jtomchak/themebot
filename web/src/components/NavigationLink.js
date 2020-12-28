@@ -49,11 +49,9 @@ const NAVIGATION = {
 
 const NavigationLink = ({ destination, children }) => {
   const { route, Path } = NAVIGATION[destination]
-  const matchInfo = useMatch(route)
   return (
     <NavLink
       to={route}
-      isActive={matchInfo.match}
       activeClassName="bg-gray-200 text-gray-900"
       className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"
     >
