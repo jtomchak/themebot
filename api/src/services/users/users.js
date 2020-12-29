@@ -9,14 +9,12 @@ export const createUser = ({ input }) => {
 }
 
 export const getUserByNetlifyID = ({ id }) => {
-  return db.user.findUnique({
-    where: {
-      netlifyID: id,
-    },
+  return db.user.findFirst({
+    where: { netlifyID: id },
   })
 }
-export const getUserByStripeID = ({ id }) => {
-  return db.user.findUnique({
+export const getUserByStripeID = (id) => {
+  return db.user.findFirst({
     where: {
       stripeID: id,
     },

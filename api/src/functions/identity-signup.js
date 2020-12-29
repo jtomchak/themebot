@@ -8,7 +8,6 @@ const signUpErrorHandler = (e) => console.log(e)
 export const handler = async (event, context) => {
   const data = JSON.parse(event.body)
   const { user, event: eventData } = data
-
   // create a new customer in Stripe
   const customer = await stripe.customers.create({ email: user.email })
 
