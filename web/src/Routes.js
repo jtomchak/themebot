@@ -18,6 +18,7 @@ const Routes = () => {
       <Private unauthenticated="login">
         <Route path="/theme" page={ThemePage} name="theme" />
         <Route path="/daily" page={DailyPage} name="daily" />
+        <Route path="/account" page={AccountPage} name="account" />
         <Route path="/profile" page={ProfilePage} name="profile" />
       </Private>
       <Route notfound page={NotFoundPage} />

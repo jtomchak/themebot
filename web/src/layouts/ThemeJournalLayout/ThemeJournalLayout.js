@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link, routes } from '@redwoodjs/router'
+import { useAuth } from '@redwoodjs/auth'
 import { Transition } from '@headlessui/react'
 
 import NavigationLink from '../../components/NavigationLink'
 
 const ThemeJournalLayout = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { userMetadata, currentUser } = useAuth()
   // Allow to use the `esc` key
   useEffect(() => {
     function handleEscape(event) {
@@ -102,7 +104,7 @@ const ThemeJournalLayout = ({ children }) => {
             </nav>
           </div>
           <div className="flex-shrink-0 flex bg-gray-700 p-4">
-            <a href="/" className="flex-shrink-0 group block">
+            <Link to={routes.account()} className="flex-shrink-0 group block">
               <div className="flex items-center">
                 <div>
                   <img
@@ -112,13 +114,15 @@ const ThemeJournalLayout = ({ children }) => {
                   />
                 </div>
                 <div className="ml-3">
-                  <p className="text-base font-medium text-white">Tom Cook</p>
+                  <p className="text-base font-medium text-white">
+                    {userMetadata.email}
+                  </p>
                   <p className="text-sm font-medium text-gray-400 group-hover:text-gray-300">
-                    View profile
+                    View Account
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </Transition.Child>
 
@@ -146,7 +150,10 @@ const ThemeJournalLayout = ({ children }) => {
               </nav>
             </div>
             <div className="flex-shrink-0 flex bg-gray-700 p-4">
-              <a href="/" className="flex-shrink-0 w-full group block">
+              <Link
+                to={routes.account()}
+                className="flex-shrink-0 w-full group block"
+              >
                 <div className="flex items-center">
                   <div>
                     <img
@@ -156,13 +163,15 @@ const ThemeJournalLayout = ({ children }) => {
                     />
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-white">Tom Cook</p>
+                    <p className="text-sm font-medium text-white">
+                      {userMetadata.email}
+                    </p>
                     <p className="text-xs font-medium text-gray-300 group-hover:text-gray-200">
-                      View profile
+                      View Account
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
