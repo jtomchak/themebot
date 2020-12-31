@@ -22,7 +22,11 @@ export const handler = async ({ body, headers }, context) => {
     const { netlifyID } = result
 
     // take the first word of the plan name and use it as the role
-    const role = subscription.items.data[0].plan.metadata.role
+    const productID = subscription.items.data[0].plan.product
+    const stripeProduct = await stripe.products.retrieve(productID)
+    const {
+      metadata: { role },
+    } = stripeProduct
 
     // send a call to the Netlify Identity admin API to update the user role
     const { identity } = context.clientContext
