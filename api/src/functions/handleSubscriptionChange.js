@@ -16,9 +16,8 @@ export const handler = async ({ body, headers }, context) => {
     const subscription = stripeEvent.data.object
 
     const result = await getUserByStripeID(subscription.customer)
-    console.log(result)
     // get netlify id from the stripe id
-    const { netlifyID } = result.data.getUserByStripeID
+    const { netlifyID } = result
 
     // take the first word of the plan name and use it as the role
     const plan = subscription.items.data[0].plan.nickname
