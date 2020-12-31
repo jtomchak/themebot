@@ -13,10 +13,10 @@ export const getUserByNetlifyID = ({ netlifyID }) => {
     where: { netlifyID },
   })
 }
-export const getUserByStripeID = (id) => {
+export const getUserByStripeID = ({ stripeID }) => {
   return db.user.findFirst({
     where: {
-      stripeID: id,
+      stripeID: stripeID,
     },
   })
 }

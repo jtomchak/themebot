@@ -6,7 +6,6 @@ const stripe = stripeModule(process.env.STRIPE_SECRET_KEY)
 const signUpErrorHandler = (e) => console.log(e)
 
 export const handler = async (event, context) => {
-  console.log(event)
   const data = JSON.parse(event.body)
   const { user, event: eventData } = data
   // create a new customer in Stripe
