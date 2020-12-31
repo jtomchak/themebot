@@ -1,4 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+import fetch from 'node-fetch'
+
 import { getUserByStripeID } from 'src/services/users/users'
 
 export const handler = async ({ body, headers }, context) => {
