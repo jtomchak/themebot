@@ -16,7 +16,7 @@ export const handler = async ({ body, headers }, context) => {
     const subscription = stripeEvent.data.object
 
     const result = await getUserByStripeID(subscription.customer)
-
+    console.log(result)
     // get netlify id from the stripe id
     const { netlifyID } = result.data.getUserByStripeID
 
