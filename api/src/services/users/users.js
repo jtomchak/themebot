@@ -8,9 +8,9 @@ export const createUser = ({ input }) => {
   return db.user.create({ data: input })
 }
 
-export const getUserByNetlifyID = ({ id }) => {
+export const getUserByNetlifyID = ({ netlifyID }) => {
   return db.user.findFirst({
-    where: { netlifyID: id },
+    where: { netlifyID },
   })
 }
 export const getUserByStripeID = (id) => {

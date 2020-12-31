@@ -1,5 +1,7 @@
+import { __REDWOOD__ as config } from '@redwoodjs/web'
 import { Link, routes } from '@redwoodjs/router'
 import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
+import StripeSessionCell from 'src/components/StripeSessionCell'
 
 const AccountPage = () => {
   return (
@@ -294,168 +296,21 @@ const AccountPage = () => {
               </div>
             </div>
           </div>
-
-          <div className="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
-            <div>
+          {/* Manage Subscriptions */}
+          <div className="bg-white shadow sm:rounded-lg">
+            <div className="px-4 py-5 sm:p-6">
               <h3 className="text-lg leading-6 font-medium text-gray-900">
-                Notifications
+                Manage subscription
               </h3>
-              <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                We'll always let you know about important changes, but you pick
-                what else you want to hear about.
-              </p>
-            </div>
-            <div className="space-y-6 sm:space-y-5 divide-y divide-gray-200">
-              <div className="pt-6 sm:pt-5">
-                <div role="group" aria-labelledby="label-email">
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
-                    <div>
-                      <div
-                        className="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700"
-                        id="label-email"
-                      >
-                        By Email
-                      </div>
-                    </div>
-                    <div className="mt-4 sm:mt-0 sm:col-span-2">
-                      <div className="max-w-lg space-y-4">
-                        <div className="relative flex items-start">
-                          <div className="flex items-center h-5">
-                            <input
-                              id="comments"
-                              name="comments"
-                              type="checkbox"
-                              className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                            />
-                          </div>
-                          <div className="ml-3 text-sm">
-                            <label
-                              htmlFor="comments"
-                              className="font-medium text-gray-700"
-                            >
-                              Comments
-                            </label>
-                            <p className="text-gray-500">
-                              Get notified when someones posts a comment on a
-                              posting.
-                            </p>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="relative flex items-start">
-                            <div className="flex items-center h-5">
-                              <input
-                                id="candidates"
-                                name="candidates"
-                                type="checkbox"
-                                className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                              />
-                            </div>
-                            <div className="ml-3 text-sm">
-                              <label
-                                htmlFor="candidates"
-                                className="font-medium text-gray-700"
-                              >
-                                Candidates
-                              </label>
-                              <p className="text-gray-500">
-                                Get notified when a candidate applies for a job.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="relative flex items-start">
-                            <div className="flex items-center h-5">
-                              <input
-                                id="offers"
-                                name="offers"
-                                type="checkbox"
-                                className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                              />
-                            </div>
-                            <div className="ml-3 text-sm">
-                              <label
-                                htmlFor="offers"
-                                className="font-medium text-gray-700"
-                              >
-                                Offers
-                              </label>
-                              <p className="text-gray-500">
-                                Get notified when a candidate accepts or rejects
-                                an offer.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="mt-2 sm:flex sm:items-start sm:justify-between">
+                <div className="max-w-xl text-sm text-gray-500">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Recusandae voluptatibus corrupti atque repudiandae nam.
+                  </p>
                 </div>
-              </div>
-              <div className="pt-6 sm:pt-5">
-                <div role="group" aria-labelledby="label-notifications">
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
-                    <div>
-                      <div
-                        className="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700"
-                        id="label-notifications"
-                      >
-                        Push Notifications
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <div className="max-w-lg">
-                        <p className="text-sm text-gray-500">
-                          These are delivered via SMS to your mobile phone.
-                        </p>
-                        <div className="mt-4 space-y-4">
-                          <div className="flex items-center">
-                            <input
-                              id="push_everything"
-                              name="push_notifications"
-                              type="radio"
-                              className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                            />
-                            <label
-                              htmlFor="push_everything"
-                              className="ml-3 block text-sm font-medium text-gray-700"
-                            >
-                              Everything
-                            </label>
-                          </div>
-                          <div className="flex items-center">
-                            <input
-                              id="push_email"
-                              name="push_notifications"
-                              type="radio"
-                              className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                            />
-                            <label
-                              htmlFor="push_email"
-                              className="ml-3 block text-sm font-medium text-gray-700"
-                            >
-                              Same as email
-                            </label>
-                          </div>
-                          <div className="flex items-center">
-                            <input
-                              id="push_nothing"
-                              name="push_notifications"
-                              type="radio"
-                              className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                            />
-                            <label
-                              htmlFor="push_nothing"
-                              className="ml-3 block text-sm font-medium text-gray-700"
-                            >
-                              No push notifications
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                  <StripeSessionCell />
                 </div>
               </div>
             </div>

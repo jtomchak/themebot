@@ -12,7 +12,6 @@ generator client {
 
 // Define your own datamodels here and run `yarn redwood db save` to create
 // migrations for them.
-// TODO: Please remove the following example:
 model User {
   id        Int      @id @default(autoincrement())
   netlifyID String   @unique
