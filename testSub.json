@@ -1,0 +1,221 @@
+{
+  "id": "evt_1I4YvFIZnK9XZQM2RhfIKlBS",
+  "object": "event",
+  "api_version": "2020-08-27",
+  "created": 1609450984,
+  "data": {
+    "object": {
+      "id": "sub_Ifu2Qt3odoypmz",
+      "object": "subscription",
+      "application_fee_percent": null,
+      "billing_cycle_anchor": 1609450982,
+      "billing_thresholds": null,
+      "cancel_at": null,
+      "cancel_at_period_end": false,
+      "canceled_at": null,
+      "collection_method": "charge_automatically",
+      "created": 1609448307,
+      "current_period_end": 1640986982,
+      "current_period_start": 1609450982,
+      "customer": "cus_IftqgT0M0ffaez",
+      "days_until_due": null,
+      "default_payment_method": null,
+      "default_source": null,
+      "default_tax_rates": [
+      ],
+      "discount": null,
+      "ended_at": null,
+      "items": {
+        "object": "list",
+        "data": [
+          {
+            "id": "si_Ifu2VViNAMzAfs",
+            "object": "subscription_item",
+            "billing_thresholds": null,
+            "created": 1609448308,
+            "metadata": {
+            },
+            "plan": {
+              "id": "price_1I3THkIZnK9XZQM2d53XkGnL",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 2999,
+              "amount_decimal": "2999",
+              "billing_scheme": "per_unit",
+              "created": 1609190988,
+              "currency": "usd",
+              "interval": "year",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {
+              },
+              "nickname": null,
+              "product": "prod_Iemr4YBEPBH9it",
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "price": {
+              "id": "price_1I3THkIZnK9XZQM2d53XkGnL",
+              "object": "price",
+              "active": true,
+              "billing_scheme": "per_unit",
+              "created": 1609190988,
+              "currency": "usd",
+              "livemode": false,
+              "lookup_key": null,
+              "metadata": {
+              },
+              "nickname": null,
+              "product": "prod_Iemr4YBEPBH9it",
+              "recurring": {
+                "aggregate_usage": null,
+                "interval": "year",
+                "interval_count": 1,
+                "trial_period_days": null,
+                "usage_type": "licensed"
+              },
+              "tiers_mode": null,
+              "transform_quantity": null,
+              "type": "recurring",
+              "unit_amount": 2999,
+              "unit_amount_decimal": "2999"
+            },
+            "quantity": 1,
+            "subscription": "sub_Ifu2Qt3odoypmz",
+            "tax_rates": [
+            ]
+          }
+        ],
+        "has_more": false,
+        "total_count": 1,
+        "url": "/v1/subscription_items?subscription=sub_Ifu2Qt3odoypmz"
+      },
+      "latest_invoice": "in_1I4YvCIZnK9XZQM2eDlIfpmV",
+      "livemode": false,
+      "metadata": {
+      },
+      "next_pending_invoice_item_invoice": null,
+      "pause_collection": null,
+      "pending_invoice_item_interval": null,
+      "pending_setup_intent": null,
+      "pending_update": null,
+      "plan": {
+        "id": "price_1I3THkIZnK9XZQM2d53XkGnL",
+        "object": "plan",
+        "active": true,
+        "aggregate_usage": null,
+        "amount": 2999,
+        "amount_decimal": "2999",
+        "billing_scheme": "per_unit",
+        "created": 1609190988,
+        "currency": "usd",
+        "interval": "year",
+        "interval_count": 1,
+        "livemode": false,
+        "metadata": {
+        },
+        "nickname": null,
+        "product": "prod_Iemr4YBEPBH9it",
+        "tiers_mode": null,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "usage_type": "licensed"
+      },
+      "quantity": 1,
+      "schedule": null,
+      "start_date": 1609448307,
+      "status": "active",
+      "transfer_data": null,
+      "trial_end": null,
+      "trial_start": null
+    },
+    "previous_attributes": {
+      "billing_cycle_anchor": 1609450557,
+      "current_period_end": 1612128957,
+      "current_period_start": 1609450557,
+      "items": {
+        "data": [
+          {
+            "id": "si_Ifu2VViNAMzAfs",
+            "object": "subscription_item",
+            "billing_thresholds": null,
+            "created": 1609448308,
+            "metadata": {
+            },
+            "plan": {
+              "id": "price_1I3THMIZnK9XZQM2qfsWdGRi",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 299,
+              "amount_decimal": "299",
+              "billing_scheme": "per_unit",
+              "created": 1609190964,
+              "currency": "usd",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {
+              },
+              "nickname": null,
+              "product": "prod_IemrLp3btoLh4y",
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "price": {
+              "id": "price_1I3THMIZnK9XZQM2qfsWdGRi",
+              "object": "price",
+              "active": true,
+              "billing_scheme": "per_unit",
+              "created": 1609190964,
+              "currency": "usd",
+              "livemode": false,
+              "lookup_key": null,
+              "metadata": {
+              },
+              "nickname": null,
+              "product": "prod_IemrLp3btoLh4y",
+              "recurring": {
+                "aggregate_usage": null,
+                "interval": "month",
+                "interval_count": 1,
+                "trial_period_days": null,
+                "usage_type": "licensed"
+              },
+              "tiers_mode": null,
+              "transform_quantity": null,
+              "type": "recurring",
+              "unit_amount": 299,
+              "unit_amount_decimal": "299"
+            },
+            "quantity": 1,
+            "subscription": "sub_Ifu2Qt3odoypmz",
+            "tax_rates": [
+            ]
+          }
+        ]
+      },
+      "latest_invoice": "in_1I4YoLIZnK9XZQM2qMyQ3TmF",
+      "plan": {
+        "id": "price_1I3THMIZnK9XZQM2qfsWdGRi",
+        "amount": 299,
+        "amount_decimal": "299",
+        "created": 1609190964,
+        "interval": "month",
+        "product": "prod_IemrLp3btoLh4y"
+      }
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "customer.subscription.updated"
+}

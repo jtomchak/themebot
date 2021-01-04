@@ -1,4 +1,3 @@
-import { __REDWOOD__ as config } from '@redwoodjs/web'
 import { Link, routes } from '@redwoodjs/router'
 import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
 import StripeSessionCell from 'src/components/StripeSessionCell'

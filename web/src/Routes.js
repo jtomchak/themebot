@@ -16,6 +16,7 @@ const Routes = () => {
       <Route path="/about" page={AboutPage} name="about" />
       <Route path="/" page={HomePage} name="home" />
       <Private unauthenticated="login">
+        <Route path="/theme/new-theme" page={NewThemePage} name="newTheme" />
         <Route path="/theme" page={ThemePage} name="theme" />
         <Route path="/daily" page={DailyPage} name="daily" />
         <Route path="/account" page={AccountPage} name="account" />
