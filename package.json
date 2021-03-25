@@ -5,10 +5,14 @@
       "api",
       "web"
     ],
-    "nohoist": ["react-native", "react-native/**", "material-design-icons"]
+    "nohoist": [
+      "react-native",
+      "react-native/**",
+      "material-design-icons"
+    ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "^0.21.0"
+    "@redwoodjs/core": "^0.28.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config"
