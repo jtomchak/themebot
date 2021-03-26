@@ -18,11 +18,11 @@
     "@redwoodjs/forms": "^0.28.0",
     "@redwoodjs/router": "^0.28.0",
     "@redwoodjs/web": "^0.28.0",
-    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.2",
     "netlify-identity-widget": "^1.9.1",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
     "autoprefixer": "9.8.6",

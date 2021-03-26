@@ -1,7 +1,0 @@
-# Prisma Migrate lockfile v1
-
-20201228180255-migration
-20201228180731-create-user
-20201228223445-create-data-migrations
-20210102231944-create-theme
-20210102232246-create-theme-relation

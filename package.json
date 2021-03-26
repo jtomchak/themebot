@@ -8,7 +8,9 @@
     "nohoist": [
       "react-native",
       "react-native/**",
-      "material-design-icons"
+      "material-design-icons",
+      "@tailwindcss/forms",
+      "@tailwindcss/forms/**"
     ]
   },
   "devDependencies": {
@@ -18,7 +20,11 @@
     "extends": "@redwoodjs/eslint-config"
   },
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "yarn": ">=1.15"
-  }
+  },
+  "resolutions": {
+      "react-dom": "17.0.1",
+      "react": "17.0.1"
+      }
 }
