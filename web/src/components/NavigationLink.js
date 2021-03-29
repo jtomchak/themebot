@@ -63,7 +63,9 @@ const NavigationLink = ({ destination, children }) => {
         viewBox="0 0 24 24"
         stroke="currentColor"
         aria-hidden="true"
-      ></svg>
+      >
+        <Path />
+      </svg>
       {children}
     </NavLink>
   )
