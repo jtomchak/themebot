@@ -22,8 +22,8 @@ model User {
 
 model Theme {
   id            String    @id @default(cuid())
-  user          User      @relation(fields: [userId], references: [id])
-  userId        Int
+  user          User      @relation(fields: [userId], references: [netlifyID])
+  userId        String
   title         String
   description   Json
   createdAt     DateTime  @default(now())

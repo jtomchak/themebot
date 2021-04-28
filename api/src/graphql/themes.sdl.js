@@ -8,8 +8,8 @@ export const schema = gql`
     createdAt: DateTime!
     startingAt: DateTime!
     endingAt: DateTime
-    dailyPrompts: [String]!
-    dailyTracking: [String]!
+    dailyPrompts: [String]
+    dailyTracking: [String]
   }
 
   type Query {
@@ -17,13 +17,13 @@ export const schema = gql`
   }
 
   input CreateThemeInput {
-    userId: Int!
+    userId: Int
     title: String!
     description: JSON!
-    startingAt: DateTime!
+    startingAt: DateTime
     endingAt: DateTime
-    dailyPrompts: [String]!
-    dailyTracking: [String]!
+    dailyPrompts: [String]
+    dailyTracking: [String]
   }
 
   input UpdateThemeInput {
@@ -32,8 +32,8 @@ export const schema = gql`
     description: JSON
     startingAt: DateTime
     endingAt: DateTime
-    dailyPrompts: [String]!
-    dailyTracking: [String]!
+    dailyPrompts: [String]
+    dailyTracking: [String]
   }
 
   type Mutation {

@@ -1,4 +1,5 @@
 import { db } from 'src/lib/db'
+// import { context } from '@redwoodjs/api'
 
 export const themes = () => {
   return db.theme.findMany()
@@ -9,5 +10,10 @@ export const Theme = {
 }
 
 export const createTheme = ({ input }) => {
-  return db.theme.create({ data: input })
+  return db.theme.create({
+    data: {
+      ...input,
+      userId: context.currentUser.sub,
+    },
+  })
 }

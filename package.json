@@ -14,7 +14,7 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "^0.28.0"
+    "@redwoodjs/core": "^0.30.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config"
@@ -24,7 +24,7 @@
     "yarn": ">=1.15"
   },
   "resolutions": {
-      "react-dom": "17.0.1",
-      "react": "17.0.1"
-      }
+    "react-dom": "17.0.1",
+    "react": "17.0.1"
+  }
 }
