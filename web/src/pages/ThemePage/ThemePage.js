@@ -1,5 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
+import ThemesCell from 'src/components/ThemesCell'
 
 const ThemePage = () => {
   return (
@@ -17,6 +18,7 @@ const ThemePage = () => {
           </Link>
         </div>
       </div>
+      <ThemesCell />
     </ThemeJournalLayout>
   )
 }
