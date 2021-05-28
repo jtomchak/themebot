@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@redwoodjs/api": "^0.30.0",
+    "@redwoodjs/api": "^0.32.2",
     "node-fetch": "^2.6.1",
     "stripe": "^8.129.0"
   }

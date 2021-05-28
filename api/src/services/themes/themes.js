@@ -1,8 +1,8 @@
 import { db } from 'src/lib/db'
 // import { context } from '@redwoodjs/api'
 
-export const themes = () => {
-  return db.theme.findMany()
+export const themes = async () => {
+  return await db.theme.findMany({ where: { userId: context.currentUser.sub } })
 }
 
 export const Theme = {
