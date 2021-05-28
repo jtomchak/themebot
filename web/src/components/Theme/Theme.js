@@ -1,4 +1,5 @@
 import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { routes, Link } from '@redwoodjs/router'
 
 const formattedDate = (datetime) => {
   const parsedDate = new Date(datetime)
@@ -7,9 +8,10 @@ const formattedDate = (datetime) => {
 }
 
 const Theme = ({ theme }) => {
+  const { id } = theme
   return (
     <div>
-      <a href={theme.href} className="block hover:bg-gray-50">
+      <Link to={routes.theme({ id })} className="block hover:bg-gray-50">
         <div className="flex items-center px-4 py-4 sm:px-6">
           <div className="min-w-0 flex-1 flex items-center">
             <div className="flex-shrink-0">
@@ -54,7 +56,7 @@ const Theme = ({ theme }) => {
             />
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

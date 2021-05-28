@@ -15,9 +15,10 @@ const Routes = () => {
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/about" page={AboutPage} name="about" />
       <Route path="/" page={HomePage} name="home" />
-      <Private unauthenticated="login">
+      <Private unauthenticated="home">
+        <Route path="/themes" page={ThemePage} name="themes" />
+        <Route path="/theme/{id}" page={NewThemePage} name="theme" />
         <Route path="/theme/new-theme" page={NewThemePage} name="newTheme" />
-        <Route path="/theme" page={ThemePage} name="theme" />
         <Route path="/daily" page={DailyPage} name="daily" />
         <Route path="/account" page={AccountPage} name="account" />
         <Route path="/profile" page={ProfilePage} name="profile" />
