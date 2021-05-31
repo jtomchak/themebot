@@ -100,7 +100,7 @@ const ThemeJournalLayout = ({ children }) => {
             <nav className="mt-5 px-2 space-y-1">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <NavigationLink destination="daily">Daily</NavigationLink>
-              <NavigationLink destination="theme">Theme</NavigationLink>
+              <NavigationLink destination="themes">Theme</NavigationLink>
             </nav>
           </div>
           <div className="flex-shrink-0 flex bg-gray-700 p-4">
@@ -146,7 +146,7 @@ const ThemeJournalLayout = ({ children }) => {
               <nav className="mt-5 flex-1 px-2 bg-gray-800 space-y-1">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <NavigationLink destination="daily">Daily</NavigationLink>
-                <NavigationLink destination="theme">Theme</NavigationLink>
+                <NavigationLink destination="themes">Theme</NavigationLink>
               </nav>
             </div>
             <div className="flex-shrink-0 flex bg-gray-700 p-4">

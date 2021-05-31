@@ -16,7 +16,7 @@ const Routes = () => {
       <Route path="/about" page={AboutPage} name="about" />
       <Route path="/" page={HomePage} name="home" />
       <Private unauthenticated="home">
-        <Route path="/themes" page={ThemePage} name="themes" />
+        <Route path="/themes" page={ThemesPage} name="themes" />
         <Route path="/theme/{id}" page={NewThemePage} name="theme" />
         <Route path="/theme/new-theme" page={NewThemePage} name="newTheme" />
         <Route path="/daily" page={DailyPage} name="daily" />

@@ -23,8 +23,8 @@ const NAVIGATION = {
       />
     ),
   },
-  theme: {
-    route: routes.theme(),
+  themes: {
+    route: routes.themes(),
     Path: () => (
       <path
         strokeLinecap="round"

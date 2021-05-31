@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
 import ThemesCell from 'src/components/ThemesCell'
 
-const ThemePage = () => {
+const ThemesPage = () => {
   return (
     <ThemeJournalLayout>
       <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
@@ -23,4 +23,4 @@ const ThemePage = () => {
   )
 }
 
-export default ThemePage
+export default ThemesPage
