@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, routes, navigate, Redirect } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
 import { Transition } from '@headlessui/react'
+import SubscriptionBanner from '../../components/SubscriptionBanner'
 
 const HomePage = () => {
   const { isAuthenticated, signUp } = useAuth()
@@ -127,35 +128,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex md:space-x-10">
-                <a
-                  href="/"
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Product
-                </a>
 
-                <a
-                  href="/"
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Features
-                </a>
-
-                <a
-                  href="/"
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Marketplace
-                </a>
-
-                <a
-                  href="/"
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Company
-                </a>
-              </div>
               <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <span className="inline-flex rounded-md shadow">
                   {/* SignUp or Dashboard */}
@@ -228,39 +201,6 @@ const HomePage = () => {
                 aria-orientation="vertical"
                 aria-labelledby="main-menu"
               >
-                <div className="px-2 pt-2 pb-3 space-y-1" role="none">
-                  <a
-                    href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    role="menuitem"
-                  >
-                    Product
-                  </a>
-
-                  <a
-                    href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    role="menuitem"
-                  >
-                    Features
-                  </a>
-
-                  <a
-                    href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    role="menuitem"
-                  >
-                    Marketplace
-                  </a>
-
-                  <a
-                    href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    role="menuitem"
-                  >
-                    Company
-                  </a>
-                </div>
                 <div role="none">
                   {!isAuthenticated && (
                     <button
@@ -286,17 +226,21 @@ const HomePage = () => {
           <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
             <div className="text-center">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block">Data to enrich your</span>
-                <span className="block text-indigo-600">online business</span>
+                <span className="block">A Helper </span>
+                <span className="block text-indigo-600">
+                  To Keep You Journaling
+                </span>
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                Journaling is great, for some it's difficult to stick with it.
+                Let Themebot help. With reminders, promts, and quick inputs, add
+                as much or as little as you'd like in the moment. Track your
+                progress, earn badges to show off your accomplishments and more.
               </p>
             </div>
           </div>
         </div>
+        <SubscriptionBanner />
         <div className="relative">
           <div className="absolute inset-0 flex flex-col" aria-hidden="true">
             <div className="flex-1"></div>
@@ -314,45 +258,8 @@ const HomePage = () => {
       <div className="bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <h2 className="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">
-            Trusted by over 26,000 forward-thinking companies
+            Making journaling as friction free as possible.
           </h2>
-          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Transistor"
-              />
-            </div>
-            <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                alt="Workcation"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>

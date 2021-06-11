@@ -94,7 +94,7 @@ const ThemeJournalLayout = ({ children }) => {
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                alt="Workflow"
+                alt="ThemeBot"
               />
             </div>
             <nav className="mt-5 px-2 space-y-1">
@@ -140,7 +140,7 @@ const ThemeJournalLayout = ({ children }) => {
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                  alt="Workflow"
+                  alt="ThemeBot"
                 />
               </div>
               <nav className="mt-5 flex-1 px-2 bg-gray-800 space-y-1">

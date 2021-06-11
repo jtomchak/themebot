@@ -14,6 +14,7 @@ export const schema = gql`
 
   type Query {
     themes: [Theme!]!
+    theme(id: String!): Theme
   }
 
   input CreateThemeInput {
