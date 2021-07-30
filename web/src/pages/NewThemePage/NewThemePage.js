@@ -23,7 +23,7 @@ const NewThemePage = () => {
   const [create, { loading, error }] = useMutation(CREATE_THEME, {
     onCompleted: () => {
       toast.success('New theme saved and ready!')
-      location.href = '/theme'
+      location.href = '/themes'
     },
   })
   const onSubmit = (data) => {
