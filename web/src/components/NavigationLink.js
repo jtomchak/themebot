@@ -24,7 +24,7 @@ const NAVIGATION = {
     ),
   },
   themes: {
-    route: routes.themes(),
+    route: routes.theme(),
     Path: () => (
       <path
         strokeLinecap="round"

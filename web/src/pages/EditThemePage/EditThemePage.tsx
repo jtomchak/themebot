@@ -11,7 +11,7 @@ const CREATE_THEME = gql`
   }
 `
 
-const NewThemePage = () => {
+const EditThemePage = () => {
   const [create, { loading, error }] = useMutation(CREATE_THEME, {
     onCompleted: () => {
       toast.success('New theme saved and ready!')
@@ -29,4 +29,4 @@ const NewThemePage = () => {
   )
 }
 
-export default NewThemePage
+export default EditThemePage

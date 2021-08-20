@@ -1,11 +1,11 @@
 import { render } from '@redwoodjs/testing'
 
-import ThemesPage from './ThemesPage'
+import EditThemePage from './EditThemePage'
 
-describe('ThemesPage', () => {
+describe('EditThemePagePage', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ThemesPage />)
+      render(<EditThemePagePage />)
     }).not.toThrow()
   })
 })
