@@ -2,8 +2,11 @@ import { requireAuth, getCurrentUser } from 'src/lib/auth'
 import { getUserByNetlifyID } from 'src/services/users/users'
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
+export const beforeResolver = (rules) => {
+  rules.add(requireAuth)
+}
+
 export const getStripeSession = async () => {
-  requireAuth()
   const { currentUser } = context
   try {
     const result = await getUserByNetlifyID({ netlifyID: currentUser.sub })
