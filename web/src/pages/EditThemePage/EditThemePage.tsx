@@ -15,7 +15,7 @@ const EditThemePage = () => {
   const [create, { loading, error }] = useMutation(CREATE_THEME, {
     onCompleted: () => {
       toast.success('New theme saved and ready!')
-      location.href = '/themes'
+      location.href = '/theme'
     },
   })
   const onSubmit = (data) => {
