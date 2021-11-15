@@ -8,7 +8,7 @@ import {
 } from '@redwoodjs/forms'
 import { routes, navigate } from '@redwoodjs/router'
 
-const ThemeForm = ({ onSubmit, loading, error }) => {
+const ThemeForm = ({ onSubmit, loading, error, theme }) => {
   return (
     <Form
       onSubmit={onSubmit}
@@ -45,6 +45,7 @@ const ThemeForm = ({ onSubmit, loading, error }) => {
                   <TextField
                     type="text"
                     name="title"
+                    defaultValue={theme?.title}
                     validation={{ required: true }}
                     className="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
                     errorClassName="flex-1 block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
@@ -67,6 +68,7 @@ const ThemeForm = ({ onSubmit, loading, error }) => {
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <TextAreaField
                   name="description"
+                  defaultValue={theme?.description}
                   rows="3"
                   validation={{ required: true }}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"

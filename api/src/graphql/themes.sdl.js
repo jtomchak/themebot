@@ -28,7 +28,6 @@ export const schema = gql`
   }
 
   input UpdateThemeInput {
-    userId: Int
     title: String
     description: JSON
     startingAt: DateTime
@@ -39,5 +38,6 @@ export const schema = gql`
 
   type Mutation {
     createTheme(input: CreateThemeInput!): Theme @requireAuth
+    updateTheme(id: String!, input: UpdateThemeInput!): Theme @requireAuth
   }
 `

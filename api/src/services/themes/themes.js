@@ -12,8 +12,7 @@ export const themes = async () => {
 export const theme = async ({ id }) => {
   if (!id) return null
 
-  const userId = context.currentUser?.sub
-  return await db.theme.findOne({ where: { id, userId } })
+  return await db.theme.findUnique({ where: { id } })
 }
 
 export const createTheme = ({ input }) => {
@@ -23,4 +22,8 @@ export const createTheme = ({ input }) => {
       userId: context.currentUser.sub,
     },
   })
+}
+
+export const updateTheme = ({ id, input }) => {
+  return db.theme.update({ where: { id }, data: { ...input } })
 }

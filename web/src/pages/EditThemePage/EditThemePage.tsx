@@ -1,30 +1,14 @@
-import { useMutation } from '@redwoodjs/web'
-import { toast, Toaster } from '@redwoodjs/web/toast'
-import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
-import ThemeForm from 'src/components/Theme/ThemeForm'
+import { useParams } from '@redwoodjs/router'
 
-const CREATE_THEME = gql`
-  mutation CreateThemeMutation($input: CreateThemeInput!) {
-    createTheme(input: $input) {
-      id
-    }
-  }
-`
+import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout/ThemeJournalLayout'
+import EditThemeCell from 'src/components/EditThemeCell/EditThemeCell'
 
 const EditThemePage = () => {
-  const [create, { loading, error }] = useMutation(CREATE_THEME, {
-    onCompleted: () => {
-      toast.success('New theme saved and ready!')
-      location.href = '/theme'
-    },
-  })
-  const onSubmit = (data) => {
-    create({ variables: { input: data } })
-  }
+  const { id } = useParams()
+
   return (
     <ThemeJournalLayout>
-      <Toaster />
-      <ThemeForm loading={loading} error={error} onSubmit={onSubmit} />
+      <EditThemeCell id={id} />
     </ThemeJournalLayout>
   )
 }
