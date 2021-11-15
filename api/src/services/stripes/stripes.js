@@ -1,5 +1,6 @@
 import { requireAuth, getCurrentUser } from 'src/lib/auth'
 import { getUserByNetlifyID } from 'src/services/users/users'
+import { context } from '@redwoodjs/graphql-server'
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 export const beforeResolver = (rules) => {

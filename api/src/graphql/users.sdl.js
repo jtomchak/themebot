@@ -7,9 +7,9 @@ export const schema = gql`
   }
 
   type Query {
-    users: [User!]!
-    getUserByNetlifyID(netlifyID: String!): User!
-    getUserByStripeID(stripeID: String!): User!
+    users: [User!]! @requireAuth
+    getUserByNetlifyID(netlifyID: String!): User! @requireAuth
+    getUserByStripeID(stripeID: String!): User! @requireAuth
   }
 
   input CreateUserInput {
@@ -23,6 +23,6 @@ export const schema = gql`
   }
 
   type Mutation {
-    createUser(input: CreateUserInput!): User
+    createUser(input: CreateUserInput!): User @requireAuth
   }
 `

@@ -55,7 +55,8 @@
 // The function `getCurrentUser` should return the user information
 // together with a collection of roles to check for role assignment:
 
-import { AuthenticationError, ForbiddenError, parseJWT } from '@redwoodjs/api'
+import { parseJWT } from '@redwoodjs/api'
+import { AuthenticationError, ForbiddenError } from '@redwoodjs/graphql-server'
 
 /**
  * Use requireAuth in your services to check that a user is logged in,
@@ -97,8 +98,24 @@ import { AuthenticationError, ForbiddenError, parseJWT } from '@redwoodjs/api'
  *   }
  * }
  */
-export const getCurrentUser = async (decoded, { _token, _type }) => {
-  return { ...decoded, roles: parseJWT({ decoded }).roles }
+export const getCurrentUser = async (
+  decoded,
+  { _token, _type },
+  { _event, _context }
+) => {
+  if (!decoded) {
+    // if no decoded, then never set currentUser
+    return null
+  }
+
+  const { roles } = parseJWT({ decoded }) // extract and check roles separately
+
+  if (roles) {
+    return { ...decoded, roles }
+  }
+
+  return { ...decoded } // only return when certain you have
+  // the currentUser properties
 }
 
 /**

@@ -13,8 +13,8 @@ export const schema = gql`
   }
 
   type Query {
-    themes: [Theme!]!
-    theme(id: String!): Theme
+    themes: [Theme!]! @requireAuth
+    theme(id: String!): Theme @requireAuth
   }
 
   input CreateThemeInput {
@@ -38,6 +38,6 @@ export const schema = gql`
   }
 
   type Mutation {
-    createTheme(input: CreateThemeInput!): Theme
+    createTheme(input: CreateThemeInput!): Theme @requireAuth
   }
 `

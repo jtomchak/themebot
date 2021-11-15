@@ -1,4 +1,5 @@
 import { db } from 'src/lib/db'
+import { context } from '@redwoodjs/graphql-server'
 
 export const beforeResolver = () => {}
 

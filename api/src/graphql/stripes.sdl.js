@@ -4,6 +4,6 @@ export const schema = gql`
   }
 
   type Query {
-    getStripeSession: StripeSession!
+    getStripeSession: StripeSession! @requireAuth
   }
 `

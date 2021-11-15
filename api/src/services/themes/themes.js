@@ -1,5 +1,7 @@
 import { db } from 'src/lib/db'
 import { requireAuth } from 'src/lib/auth'
+import { context } from '@redwoodjs/graphql-server'
+
 export const beforeResolver = (rules) => {
   rules.add(requireAuth)
 }
