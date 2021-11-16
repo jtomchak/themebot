@@ -1,4 +1,5 @@
 import { useMutation } from '@redwoodjs/web'
+import { navigate, routes } from '@redwoodjs/router'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 import ThemeJournalLayout from 'src/layouts/ThemeJournalLayout'
 import ThemeForm from 'src/components/Theme/ThemeForm'
@@ -15,7 +16,7 @@ const NewThemePage = () => {
   const [create, { loading, error }] = useMutation(CREATE_THEME, {
     onCompleted: () => {
       toast.success('New theme saved and ready!')
-      location.href = '/theme'
+      navigate(routes.theme())
     },
   })
   const onSubmit = (data) => {

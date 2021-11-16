@@ -1,5 +1,6 @@
 import { useMutation } from '@redwoodjs/web'
-import type { FindEditThemeQuery } from 'types/graphql'
+
+import { navigate, routes } from '@redwoodjs/router'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import { toast, Toaster } from '@redwoodjs/web/toast'
@@ -37,7 +38,7 @@ export const Success = ({ theme }: CellSuccessProps<FindEditThemeQuery>) => {
   const [updateTheme, { loading, error }] = useMutation(UPDATE_THEME, {
     onCompleted: () => {
       toast.success('New theme saved and ready!')
-      location.href = '/theme'
+      navigate(routes.theme())
     },
   })
 
