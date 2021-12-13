@@ -3,6 +3,7 @@ import { Link, routes, navigate, Redirect } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
 import { Transition } from '@headlessui/react'
 import SubscriptionBanner from '../../components/SubscriptionBanner'
+import Logo from '../../icons/logo'
 
 const HomePage = () => {
   const { isAuthenticated, signUp } = useAuth()
@@ -93,11 +94,7 @@ const HomePage = () => {
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <a href="/">
                     <span className="sr-only">Theme Bot</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt=""
-                    />
+                    <Logo className="h-8 w-auto sm:h-18" />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
                     <button
@@ -164,11 +161,7 @@ const HomePage = () => {
             >
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
-                  />
+                  <Logo className="h-8 w-auto" />
                 </div>
                 <div className="-mr-2">
                   <button
