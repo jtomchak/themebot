@@ -8,6 +8,7 @@
 [web]
   port = 8910
   apiUrl = "/.netlify/functions"
+  title = "ThemeBot"
 [api]
   port = 8911
   schemaPath = "./api/db/schema.prisma"
