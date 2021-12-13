@@ -19,7 +19,6 @@
     "@redwoodjs/forms": "^1.0.0-rc.4",
     "@redwoodjs/router": "^1.0.0-rc.4",
     "@redwoodjs/web": "^1.0.0-rc.4",
-    "@tailwindcss/forms": "^0.3.2",
     "netlify-identity-widget": "^1.9.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
